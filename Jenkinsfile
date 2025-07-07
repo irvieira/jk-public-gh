@@ -15,7 +15,7 @@ pipeline {
         stage('Deploying') {
             steps {
                 sh '''
-                docker stop webapp_ctr
+                # docker stop webapp_ctr
                 docker run --rm -d -p 3000:3000 --name webapp_ctr webapp:${BUILD_NUMBER}
             '''
             }
